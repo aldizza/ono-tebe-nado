@@ -1,14 +1,20 @@
+.body {
+}
+
+
+
 .header {
-    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 92px 49px 92px 51px;
     place-items: center;
     font-size: 18px;
 }
 
 .header__menu {
-    place-self: center start;
+    place-self: start;
+    align-self: center;
 }
 
 .header__links-list {
@@ -16,6 +22,9 @@
     place-items: center;
     list-style: circle;
     gap: 32px;
+    margin-top: 90px;
+    margin-left: 52px;
+    max-width: 400px;
 }
 
 .header__links-list-item_no-bullit {
@@ -24,78 +33,100 @@
 
 .header__menu-link {
     text-decoration: none;
-    border-bottom: 1px #000000 solid;
+    border-bottom: 1px solid #000000; 
 }
 
 .header__logo-image {
     width: 148px;
     height: 105px;
-    justify-self: start;    
+    justify-self: start;
+    margin-top: 93px;
+    margin-right: 60px;
 }
 
 .address {
-    place-self: start end;
-    line-height: 1.34;
-    padding: 6px 0px 7px 0px;
-    width: 240px;
-    height: 24px;
+    line-height: 1.34; /*подобрать другое значение*/
+    max-width: 250px;
+    font-style: normal;
+    margin-top: 90px;
+    margin-left: 55px;
+}
+
+.section {
+    max-width: 1440px;
+    margin: auto; 
 }
 
 .cover {
-    width: 1440px;
+    width: 1440px; /*тут нужен max*/
+    max-height: 757px;
     background-image: url("../images/cover.jpg");
-    background-repeat: no-repeat;
+    background-size: cover;
+   
+    /*background-repeat: no-repeat;*/
+    
     background-size: cover;
     position: relative;
-    z-index: -5;    
+    z-index: 1;
+    margin: auto; 
 }
 
+
+
 .overlay {
-    background-color: #000000;
-    position: relative;
-    opacity: 70%;
-    width: 100%;
-    height: 100%;
-    z-index: -1;    
-}
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    max-width: 1440px;
+    opacity: 0,6;
+    z-index: -1; 
+       
+} 
 
 
 .cover__title {
-    display: block;
+    /*display: flex;*/
+    max-width: 1440px;*/
+    gap: 20px;
     color: #FFF;
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; 
     letter-spacing: 30px;
-    text-transform: uppercase;    
+    text-transform: uppercase;
+    margin-top: 90px;
+   
 }
 
 .aligned-text {
+    max-width: 1440px;
     display: block;
     padding-top: 165px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 50px; 
     line-height: 115%;
     text-transform: uppercase;
+    text-align: left;
+    box-sizing: content-box;
 }
 
+
 .aligned-text_center {
-    display: block;
+    display: block; /*это относится к дубл силизации?*/
     text-align: center;
     letter-spacing: 30px;
-    padding-top: 20px;
-    line-height: 100%; 
-    text-transform: uppercase;
+    margin-top: 20px; /*исправить на марджин*/
+    margin-right: 47px; 
+    line-height: 100%;
+    box-sizing: content-box;
 }
 
 .aligned-text_right {
     display: block;
     text-align: right;
     letter-spacing: 30px;
-    padding-top: 20px;
-    line-height: 100%; 
-    text-transform: uppercase;
+    padding-top: 20px; /*исправить на марджин*/
+    line-height: 100%;
+    box-sizing: content-box;
+    padding-right:50px;
 }
 
 .letter-spacing-extended {
@@ -103,7 +134,7 @@
 }
 
 .no-letter-spacing {
-    letter-spacing: 0px;
+    letter-spacing: initial;
 }
 
 .cover__description {
@@ -111,10 +142,10 @@
     justify-content: end;
     align-items: center;
     gap: 82px;
-    padding-top: 135px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
+    padding-top: 135px; /*исправить на марджин*/
+    padding-right: 50px; /*исправить на марджин*/
+    padding-left: 50px; /*исправить на марджин*/
+    padding-bottom: 50px; /*исправить на марджин*/
     word-spacing: 17px;
 }
 
@@ -124,7 +155,7 @@
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: normal; /*неверное значение нормал, нужно другое*/
     text-transform: uppercase;    
 }
 
@@ -142,54 +173,55 @@
     
 }
 
-.lots {
-    margin: 180px 50px;  
-    width: 1340px;
+.lots {     
+    max-width: 1440px;
+    margin: auto;
  }
 
 .lots__heading {
     color: #000;
     font-size: 40px;
+    font-weight: 700;
     text-transform: uppercase;
+    margin-top: 90px;
     margin-left: 40px;
-    text-decoration: none;
-    border-bottom: 1px #ffffff solid;
 }
 
 .lots__card-list { 
     display: flex;
     gap: 25px;
-    width: 100%;
-    height: 100%;
+    flex-wrap: wrap;
+   
 }
 
 .lots__card-list-item {
-    min-width: 430px;
-    min-height: 450px;
-    padding-top: 27px;
+    max-width: 430px;
+    margin-top: 27px; 
     flex-grow: 1;
-    list-style: none; 
+    list-style: none;
     position: relative;
 }
 
 .card-link {
     display: block;
     text-decoration: none;
-    height: 100%;
+    /*height: 100%;*/
 }
 
 .card { 
-    height: 100%;
-    width: 100%;
+    max-height: 100%; /*карточки были разной длины, я исправила на макс, но надо уточниить*/
+    max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column; 
     justify-content: space-between;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center; /*надо уточнить какое, от балды поставила центер*/
     z-index: 1; 
+    margin: auto;
+    padding: 50px 40px 32px 40px;
 }  
-   
+  
 
  
 .card_type_film {
@@ -210,7 +242,9 @@
     font-size: 22px;
     text-decoration-line: underline;
     text-transform: uppercase;
-    padding: 50px 40px 32px 40px;
+    /*padding: 50px 40px 32px 40px; /* эту строчку нужно убрать стоит общие для всех вынести на внутренний отступ карточки
+    — и задать отступ между соседними элементами через общий gap в родителе-карточке*/
+    line-height: /*надо добавить значение согласно макету*/
 }
 
 .card__text {
@@ -219,12 +253,13 @@
     font-size: 20px;
     padding-right: 40px;
     padding-bottom: 50px;
-    padding-left: 40px;     
+    padding-left: 40px;
+    line-height /*добывить значение*/    
 }
 
 .lots__look-more-link {
     display: block;
-    margin: 29px 1108px 2px 40px;
+    margin: 29px 1108px 2px 40px; /*надо придумать что-то с этим большим отступом*/
     font-size: 20px;
     line-height: normal;
     text-decoration: none;
@@ -233,11 +268,10 @@
 
 .about {
     display: grid;
-    width: 1340px;
-    height: 487px;
+    max-width: 1340px;
     grid-template-columns: 430px 1fr;
     gap: 25px;
-    margin: 0 50px;
+    margin: auto; /*0 50px;*/
 
 }
 
@@ -258,7 +292,7 @@
  }
 
 .about__column {
-    display: flex;
+    /*display: flex; надо убрать   анное свойство перетирается дублирующим нижним, необходимо оставить только одно корректное значение*/ 
     width: 100%; 
     height: 100%; 
     display: grid;
@@ -273,23 +307,26 @@
     text-transform: uppercase;
 }
 
+
+/* нужно как-то поправить, согласно чек-листу необходимо: Блок растягивается, если в него вставлено в два-три раза больше текста*/
 .about__text {
-    display: grid;
-    width: 885px; 
-    height: 270px; 
+    display: flex;
+    gap: 25px;
+    max-width: 885px; 
     color: #000;
     font-size: 20px;
     margin-top: 2px;
-    line-height: 115%;
+    line-height: 115%; /*надо другое число, не 115*/
 
 }
 
 .footer {
     display: grid;
+    max-width: 1440px;
+    margin: auto; 
     grid-template-columns: repeat(3, 1fr);
     padding: 183px 50px 90px;
     font-size: 18px;
-    width: 1440px;
 }
 
 .footer__menu {
@@ -298,8 +335,9 @@
     align-self: start;
 }
 
+/*применить стилизацию, сьехал текст*/
 .footer__address {
-    line-height: 133%;
+    line-height: 133%; /* надо другое число, это не соответствует макету*/
     
 }
 
@@ -312,7 +350,7 @@
 
 .footer__menu-link {
     text-decoration: none;
-    border-bottom: 1px #000000 solid;
+    border-bottom: 1px solid #000000;
 }
 
 
@@ -321,12 +359,12 @@
     flex-direction: row;
     justify-content: right;
     gap: 48px;
+    list-style: none;
     
 }
 
 .footer__menu-link_active {
-    list-style: none;
-    text-decoration: none;
+   
 }
 
 .footer__social-list-item {
