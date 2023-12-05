@@ -257,7 +257,7 @@
     grid-template-columns: 430px 1fr;
     gap: 25px;
     margin: 0 auto; 
-    padding-top: 183px;
+    padding-top: 180px;
 }
 
 .about__logo {
@@ -300,7 +300,6 @@
     max-width: 885px; 
     color: #000;
     font-size: 20px;
-    margin-top: 1px;
     line-height: normal;
 }
 
@@ -334,6 +333,10 @@
 .footer__menu-link {
     text-decoration: none;
     border-bottom: 1px solid #000000;
+}
+
+.footer__menu-link_active {
+    border-bottom: none;
 }
 
 .footer__social-list {
